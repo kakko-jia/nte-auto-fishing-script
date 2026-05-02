@@ -3,8 +3,9 @@
 
 ## Testing
 
-- [ ] `python -m py_compile fishing_bot_release_v2.py`
+- [ ] `python -m py_compile nte_auto_fishing.py`
 - [ ] Tested on Windows
 
 ## Notes
+
 

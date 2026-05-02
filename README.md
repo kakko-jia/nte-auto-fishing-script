@@ -1,4 +1,4 @@
-# 異環 NTE 自動釣魚程式
+﻿# 異環 NTE 自動釣魚程式
 
 這是一個給遊戲《異環》（NTE）使用的自動釣魚輔助程式。程式會透過螢幕擷取與顏色辨識，判斷釣魚提示、拉竿時機與釣魚進度條，並自動送出滑鼠點擊與鍵盤操作，幫助玩家減少重複性的釣魚流程。
 
@@ -32,19 +32,19 @@ cd nte-auto-fishing-script
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 pip install -r requirements.txt
-python fishing_bot_release_v2.py
+python nte_auto_fishing.py
 ```
 
 如果遊戲視窗標題不同，可以指定視窗名稱：
 
 ```powershell
-python fishing_bot_release_v2.py --window-title "NTE"
+python nte_auto_fishing.py --window-title "NTE"
 ```
 
 如果電腦負載較高，可以降低擷取 FPS：
 
 ```powershell
-python fishing_bot_release_v2.py --fps 30
+python nte_auto_fishing.py --fps 30
 ```
 
 ## 操作方式
@@ -56,7 +56,7 @@ python fishing_bot_release_v2.py --fps 30
 
 ## 偵測調整
 
-預設偵測範圍是依照 `2560x1440` 畫面調整出來的。如果你的 UI 位置不同，可以修改 `fishing_bot_release_v2.py` 裡的區域常數：
+預設偵測範圍是依照 `2560x1440` 畫面調整出來的。如果你的 UI 位置不同，可以修改 `nte_auto_fishing.py` 裡的區域常數：
 
 ```python
 BAR_REGION_REF = (800, 70, 1770, 130)
@@ -81,7 +81,7 @@ STEP2_BLUE_THRESHOLD = 0.06
 請使用 `--window-title` 指定完整或部分視窗標題：
 
 ```powershell
-python fishing_bot_release_v2.py --window-title "Your Window Title"
+python nte_auto_fishing.py --window-title "Your Window Title"
 ```
 
 ### 啟動後沒有反應
@@ -98,7 +98,7 @@ python fishing_bot_release_v2.py --window-title "Your Window Title"
 
 ```text
 .
-|-- fishing_bot_release_v2.py
+|-- nte_auto_fishing.py
 |-- requirements.txt
 |-- pyproject.toml
 |-- README.md
@@ -143,19 +143,19 @@ cd nte-auto-fishing-script
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 pip install -r requirements.txt
-python fishing_bot_release_v2.py
+python nte_auto_fishing.py
 ```
 
 If your game window title is different:
 
 ```powershell
-python fishing_bot_release_v2.py --window-title "NTE"
+python nte_auto_fishing.py --window-title "NTE"
 ```
 
 Lower capture FPS if your computer is under heavy load:
 
 ```powershell
-python fishing_bot_release_v2.py --fps 30
+python nte_auto_fishing.py --fps 30
 ```
 
 ## Controls
@@ -173,7 +173,7 @@ The default regions were tuned from a `2560x1440` layout:
 - `ICON_REGION_REF`: prompt/icon area
 - `HOOK_REGION_REF`: hook prompt area
 
-If detection is unreliable on your UI layout, adjust these constants in `fishing_bot_release_v2.py`:
+If detection is unreliable on your UI layout, adjust these constants in `nte_auto_fishing.py`:
 
 ```python
 BAR_REGION_REF = (800, 70, 1770, 130)
@@ -198,7 +198,7 @@ STEP2_BLUE_THRESHOLD = 0.06
 Run the script with the exact or partial window title:
 
 ```powershell
-python fishing_bot_release_v2.py --window-title "Your Window Title"
+python nte_auto_fishing.py --window-title "Your Window Title"
 ```
 
 ### Nothing happens after starting
@@ -215,7 +215,7 @@ The script scales from the reference `2560x1440` layout, but game UI position ca
 
 ```text
 .
-|-- fishing_bot_release_v2.py
+|-- nte_auto_fishing.py
 |-- requirements.txt
 |-- pyproject.toml
 |-- README.md
