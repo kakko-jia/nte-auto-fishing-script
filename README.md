@@ -29,10 +29,16 @@
 ```powershell
 git clone https://github.com/kakko-jia/nte-auto-fishing-script.git
 cd nte-auto-fishing-script
+pip install -r requirements.txt
+python nte_auto_fishing.py
+```
+
+建議但非必要：如果你不想把套件安裝到全域 Python，可以先建立虛擬環境再安裝依賴：
+
+```powershell
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 pip install -r requirements.txt
-python nte_auto_fishing.py
 ```
 
 如果遊戲視窗標題不同，可以指定視窗名稱：
@@ -140,10 +146,16 @@ Windows-only auto fishing helper for NTE. It uses screen capture plus simple col
 ```powershell
 git clone https://github.com/kakko-jia/nte-auto-fishing-script.git
 cd nte-auto-fishing-script
+pip install -r requirements.txt
+python nte_auto_fishing.py
+```
+
+Optional but recommended: create a virtual environment first if you do not want to install dependencies into your global Python environment.
+
+```powershell
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 pip install -r requirements.txt
-python nte_auto_fishing.py
 ```
 
 If your game window title is different:
